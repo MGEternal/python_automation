@@ -1,4 +1,5 @@
 from selenium import webdriver
+import time
 import pyautogui
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -22,9 +23,8 @@ wait = WebDriverWait(driver, 10)
 search_results_locator = (By.CSS_SELECTOR, "ytd-video-renderer")
 search_results = wait.until(EC.visibility_of_all_elements_located(search_results_locator))
 
-if len(search_results) >= 2:
-    # Click on the second video
-    second_video = search_results[0]
-    second_video.click()
-
-
+pyautogui.click(x=289, y=368)
+time.sleep(7)
+pyautogui.click(x=828, y=589)
+time.sleep(6)
+pyautogui.click(x=828, y=589)
